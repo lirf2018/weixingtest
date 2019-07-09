@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+    <constant name="struts.ui.theme" value="simple"/>
+
+    <package extends="struts-default" name="index" namespace="/index">
+        <action name="weixinCallBack" class="com.yufan.action.WeixinCallBackAction" method="weixinCallBackAction">
+            <!--<result name="success">/jsp/sao_ma.jsp</result> -->
+        </action>
+        <action name="sm" class="com.yufan.other.IndexAction" method="index">
+            <result name="success">../jsp/sao_ma.jsp</result>
+        </action>
+        <action name="saosao" class="com.yufan.other.IndexAction" method="saosao">
+        </action>
+
+        <action name="alipay" class="com.yufan.other.PayAction" method="index">
+            <result name="success">../jsp/alipay.jsp</result>
+        </action>
+        <action name="payTo" class="com.yufan.other.PayAction" method="payTo">
+            <result name="success">../index.jsp</result>
+        </action>
+        <action name="alipay1" class="com.yufan.other.PayAction" method="alipay1">
+        </action>
+        <action name="alipayCallBack" class="com.yufan.action.AlipayCallBack" method="index">
+        </action>
+    </package>
+</struts>    
